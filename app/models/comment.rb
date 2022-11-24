@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  belongs_to :posts, class_name: 'Post'
+  belongs_to :post
 
   # A method that updates the comments counter for a post.
   def updates_comments_counter_post

@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :likes
 
   # A method that updates the posts counter for a user.
+  after_save :updates_post_counter_user
 
   def updates_post_counter_user
     author.increment!(:post_counter)
