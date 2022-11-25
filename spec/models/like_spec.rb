@@ -1,29 +1,28 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-#     user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', post_counter: 1)
-#     it 'is valid with valid attributes' do
-#    expect(user).to be_valid
-#     end
-#     it 'is not valid without a name' do
-#       user.name = nil
-#       expect(user).to_not be_valid
-#     end
-#     it 'is not valid without a photo link' do
-#       user.photo = nil
-#       expect(user).to_not be_valid
-#     end
-#     it 'is not valid without a bio' do
-#       user.bio = nil
-#       expect(user).to_not be_valid
-#     end
-#     it 'is not valid without a post_counter' do
-#       user.post_counter = nil
-#       expect(user).to_not be_valid
-#     end
-#     it 'should return most recent post' do
-#       recent = User.new.most_recent_post
-#       expect(recent).to be_an_instance_of(User)
-#     end
-  
+  describe 'test cases for posts' do
+    before(:each) do
+      @author = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                            bio: 'Teacher from Mexico.', post_counter: 1)
+      @post = Post.create(author: @author, title: 'Hello', text: 'This is my first post', comments_counter: 1,
+                          likes_counter: 20)
+      @likes = Like.create(author: @author, post: @post)
+    end
+    it 'is valid with valid attributes' do
+      expect(@likes).to be_valid
+    end
+    it 'is not valid without author attribute' do
+      @likes.author = nil
+      expect(@likes).to_not be_valid
+    end
+    it 'is not valid without post valid attributes' do
+      @likes.post = nil
+      expect(@likes).to_not be_valid
+    end
+    it 'is valid with valid attributes' do
+      @likes.updates_likes_counter_post
+      expect(@post.likes_counter).to be(21)
+    end
+  end
 end
