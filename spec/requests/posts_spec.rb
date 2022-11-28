@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET /posts" do
-    it "returns http success" do
-      get "/posts/posts"
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /posts' do
+    it 'returns http success' do
+      get '/posts/posts'
       expect(response).to have_http_status(:success)
     end
   end
-
 end
