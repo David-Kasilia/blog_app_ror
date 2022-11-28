@@ -10,13 +10,13 @@ RSpec.describe 'Posts', type: :request do
       get '/users/:user_id/posts/:id'
       expect(response).to have_http_status(:success)
     end
-    it "response body includes correct placeholder text." do
+    it 'response body includes correct placeholder text.' do
       get '/users/:user_id/posts'
-      expect(response.body).to include(" Display The List Of Posts By A User ")
-  end
-  it 'response body includes correct placeholder text.' do
-    get '/users/:user_id/posts/:id'
-    expect(response.body).to include("Display The A Posts By A User")
-  end
+      expect(response.body).to include(' Display The List Of Posts By A User ')
+    end
+    it 'response body includes correct placeholder text.' do
+      get '/users/:user_id/posts/:id'
+      expect(response.body).to include('Display The A Posts By A User')
+    end
   end
 end
