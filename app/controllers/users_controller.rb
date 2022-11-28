@@ -1,4 +1,4 @@
 class UsersController < ApplicationController
-  def users
+  def index
   end
 end
