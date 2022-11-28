@@ -11,5 +11,10 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe PostsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+    describe 'Get Index' do
+      it “returns a successful response” do
+        get :index
+        expect(response).to be_successful
+      end
+    end
 end
