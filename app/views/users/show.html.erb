@@ -17,20 +17,21 @@
     <div class="user-posts">Number Of Posts: <%= @users.post_counter %></div>
     </div>
     </div>
-    <div class="show-body">
     <div class="user-content">
     <div class="context">Bio <br> <%= @users.bio%></div>
     </div>
-    <div class="user-content">
-    <div class="context">Post #1 </div>
-    </div>
-    <div class="user-content">
-    <div class="context">Post #2 </div>
-    </div>
-    <div class="user-content">
-    <div class="context">Post #3</div>
-    </div>
-    </div>
+    <% @users.most_recent_post.each do |post| %>
+      <div class="post-content">
+      <%= link_to user_posts_path(@users) do %>
+        <div class="ptitle"> Post : <%= post.title%></div>
+        <div class="ptext"><%= post.text%></div>
+        <div class="pcount">
+        Comments: <%= post.comments_counter%>
+        Likes: <%= post.likes_counter%>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
     <div class="all-posts"><button class="posts-btn">See all posts</button></div>
   </body>
 </html>
