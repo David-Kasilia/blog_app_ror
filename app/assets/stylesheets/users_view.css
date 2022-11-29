@@ -1,3 +1,35 @@
 * {
     font-size: 22px;
 }
+
+.icon-container {
+    border-style: solid;
+    border-width: 4px;
+    height: 150px;
+    width: 150px;
+}
+.user-icon {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-icon::before,
+.user-icon::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: black;
+}
+
+.user-icon::before {
+    transform: rotate(45deg);
+}
+
+.user-icon::after {
+    transform: rotate(-45deg);
+}

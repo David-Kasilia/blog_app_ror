@@ -10,7 +10,9 @@
   <body>
     <% User.all.each do |user| %>
     <div class="user-container">
+    <div class="icon-container">
     <div class="user-icon"></div>
+    </div>
     <div class="user-details">
     <div class="user-name"><%= user.name %></div>
     <div class="user-name">Number Of Posts: <%= user.post_counter %></div>
