@@ -1,1 +1,37 @@
-<h1>This User Page Will Display The User Details: Blog And Number Of Posts In This Blog App</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog App Ruby On Rails</title>
+    <%= stylesheet_link_tag 'users_view' %>
+  </head>
+  <body>
+    <div class="user-container">
+    <div class="icon-container">
+    <div class="user-icon"></div>
+    </div>
+    <div class="user-details">
+    <div class="user-name"><%= @users.name %></div>
+    <div class="user-posts">Number Of Posts: <%= @users.post_counter %></div>
+    </div>
+    </div>
+    <div class="show-body">
+    <div class="user-content">
+    <div class="context">Bio <br> <%= @users.bio%></div>
+    </div>
+    <div class="user-content">
+    <div class="context">Post #1 </div>
+    </div>
+    <div class="user-content">
+    <div class="context">Post #2 </div>
+    </div>
+    <div class="user-content">
+    <div class="context">Post #3</div>
+    </div>
+    </div>
+    <div class="all-posts"><button class="posts-btn">See all posts</button></div>
+  </body>
+</html>
+
