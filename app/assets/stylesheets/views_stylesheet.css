@@ -29,6 +29,7 @@ a:visited {
   width: 100px;
   margin-left: 25rem;
 }
+
 .user-icon {
   position: relative;
   height: 100px;
@@ -64,14 +65,14 @@ a:visited {
 }
 
 .user-name {
-  margin: 1rem 0rem 1rem 1rem;
+  margin: 1rem 0 1rem 1rem;
   font-size: 1.85rem;
   font-weight: 700;
 }
 
 .user-posts {
   float: right;
-  margin: -0.75rem 2rem 2rem 0rem;
+  margin: -0.75rem 2rem 2rem 0;
   font-size: 1.15rem;
   font-weight: 600;
 }
@@ -81,7 +82,7 @@ a:visited {
   border-width: 4px;
   height: 100px;
   width: 700px;
-  margin: 1rem 0rem 1rem 25rem;
+  margin: 1rem 0 1rem 25rem;
 }
 
 .all-posts {
@@ -95,7 +96,7 @@ a:visited {
 }
 
 .posts-btn {
-  margin: 0.85rem 0rem 1rem 1rem;
+  margin: 0.85rem 0 1rem 1rem;
   font-size: 1.15rem;
   font-weight: 700;
 }
@@ -110,19 +111,19 @@ a:visited {
 }
 
 .context {
-  margin: 0.25rem 0rem 1rem 1rem;
+  margin: 0.25rem 0 1rem 1rem;
   font-size: 1.05rem;
   font-weight: 700;
 }
 
 .ptitle {
-  margin: 0.25rem 0rem 1rem 1rem;
+  margin: 0.25rem 0 1rem 1rem;
   font-size: 1.05rem;
   font-weight: 700;
 }
 
 .ptext {
-  margin: 0.25rem 0rem 1rem 1rem;
+  margin: 0.25rem 0 1rem 1rem;
   font-size: 1.05rem;
   font-weight: 700;
 }
@@ -131,7 +132,7 @@ a:visited {
   float: right;
   font-size: 1.05rem;
   font-weight: 700;
-  margin: 0.75rem 2rem 0.25rem 0rem;
+  margin: 0.75rem 2rem 0.25rem 0;
 }
 
 .comments-container {
@@ -144,7 +145,7 @@ a:visited {
 }
 
 .comments-context {
-  margin: 0.25rem 0rem 1rem 1rem;
+  margin: 0.25rem 0 1rem 1rem;
   font-size: 1.05rem;
   font-weight: 700;
 }
@@ -153,5 +154,5 @@ a:visited {
   float: right;
   font-size: 1.05rem;
   font-weight: 700;
-  margin: -4.2rem 2rem 0.25rem 0rem;
+  margin: -4.2rem 2rem 0.25rem 0;
 }
