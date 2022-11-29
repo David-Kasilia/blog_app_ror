@@ -1,1 +1,18 @@
-<h1>This Posts Page Will Display The A Posts By A User and The Comments For That Post In This Blog App</h1>
+ <div class="show_post_view">
+ <div class="post-content">
+        <div class="ptitle"> Post : <%= @post.title%> by <%= @post.author.name %></div>
+        <div class="ptext"><%= @post.text%></div>
+         <div class="pcountLikes">
+        Comments: <%= @post.comments_counter%>
+        Likes: <%= @post.likes_counter%>
+    </div>
+    </div>
+     <div class="comments-container"> 
+     <% @post.comments.each do |comments| %>
+     <div class="comments">
+     <div class="comments-context">
+     <%= comments.author.name %> :  <%= comments.text %>
+     </div>
+     </div>
+     <% end %>
+ </div>

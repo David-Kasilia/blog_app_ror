@@ -6,12 +6,12 @@ body {
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 
 .user-container {
@@ -95,56 +95,63 @@ a:visited {
 }
 
 .posts-btn {
-    margin: 0.85rem 0rem 1rem 1rem;
-    font-size: 1.15rem;
-    font-weight: 700;
+  margin: 0.85rem 0rem 1rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .post-content {
-    border-style: solid;
-    border-width: 4px;
-    height: 130px;
-    width: 700px;
-    margin-top: 1.5rem;
-    margin-left: 25rem;
+  border-style: solid;
+  border-width: 4px;
+  height: 130px;
+  width: 700px;
+  margin-top: 1.5rem;
+  margin-left: 25rem;
 }
 
-.context{
-    margin: 0.25rem 0rem 1rem 1rem;
-    font-size: 1.05rem;
-    font-weight: 700;
+.context {
+  margin: 0.25rem 0rem 1rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
-.ptitle{
-    margin: 0.25rem 0rem 1rem 1rem;
-    font-size: 1.05rem;
-    font-weight: 700;
+.ptitle {
+  margin: 0.25rem 0rem 1rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
-.ptext{
-    margin: 0.25rem 0rem 1rem 1rem;
-    font-size: 1.05rem;
-    font-weight: 700;
+.ptext {
+  margin: 0.25rem 0rem 1rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
-.pcount{
-    float: right;
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 0.75rem 2rem 0.25rem 0rem;
+.pcount {
+  float: right;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0.75rem 2rem 0.25rem 0rem;
 }
 
 .comments-container {
   border-style: solid;
-    border-width: 4px;
-    height: 190px;
-    width: 700px;
-    margin-top: 1.5rem;
-    margin-left: 25rem;
+  border-width: 4px;
+  height: 190px;
+  width: 700px;
+  margin-top: 1.5rem;
+  margin-left: 25rem;
 }
 
 .comments-context {
   margin: 0.25rem 0rem 1rem 1rem;
   font-size: 1.05rem;
   font-weight: 700;
+}
+
+.pcountLikes {
+  float: right;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: -4.2rem 2rem 0.25rem 0rem;
 }
