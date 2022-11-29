@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog App Ruby On Rails</title>
-    <%= stylesheet_link_tag 'views_stylesheet' %>
-  </head>
-  <body>
+  <div class="posts_index_view">
     <div class="user-container">
     <div class="icon-container">
     <div class="user-icon"></div>
@@ -17,16 +8,26 @@
     <div class="user-posts">Number Of Posts: <%= @users.post_counter %></div>
     </div>
     </div>
-    <% @posts.all.each do |post| %>
+    <% @posts.each do |post| %>
+      <%= link_to user_posts_path(user_id: post.author_id, id: post.id) do %>
       <div class="post-content">
         <div class="ptitle"> Post : <%= post.title%></div>
         <div class="ptext"><%= post.text%></div>
         <div class="pcount">
         Comments: <%= post.comments_counter%>
         Likes: <%= post.likes_counter%>
+    </div>
         </div>
+    <div class="comments-container"> 
+     <% post.most_recent_comments.each do |comments| %>
+     <div class="comments">
+     <div class="comments-context">
+     <%= comments.author.name %> :  <%= comments.text %>
+     </div>
+     </div>
+     <% end %>
+      <% end %>
       </div>
     <% end %>
-  </body>
-</html>
+  </div>
 

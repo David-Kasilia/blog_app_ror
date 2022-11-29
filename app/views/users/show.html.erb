@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog App Ruby On Rails</title>
-    <%= stylesheet_link_tag 'views_stylesheet' %>
-  </head>
-  <body>
+<div class="users_show_view">
     <div class="user-container">
     <div class="icon-container">
     <div class="user-icon"></div>
@@ -33,6 +24,6 @@
       </div>
     <% end %>
     <div class="all-posts"><%= link_to "See all posts", user_posts_path(user_id: @users.id), class: "posts-btn" %></div>
-  </body>
-</html>
+</div>
+
 
