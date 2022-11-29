@@ -1,2 +1,22 @@
-<h1>This Users Page Will Display The List Of Users In This Blog App</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog App Ruby On Rails</title>
+    <%= stylesheet_link_tag 'users_view' %>
+  </head>
+  <body>
+    <% User.all.each do |user| %>
+    <div class="user-container">
+    <div class="user-icon"></div>
+    <div class="user-details">
+    <div class="user-name"><%= user.name %></div>
+    <div class="user-name">Number Of Posts: <%= user.post_counter %></div>
+    </div>
+    </div>
+    <% end %>
+  </body>
+</html>
 
