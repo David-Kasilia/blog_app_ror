@@ -1,2 +1,17 @@
-<h1>This Users Page Will Display The List Of Users In This Blog App</h1>
+<div class="users_view">
+    <% User.all.each do |user| %>
+    <%= link_to user do %>
+    <div class="user-container">
+    <div class="icon-container">
+    <div class="user-icon"></div>
+    </div>
+    <div class="user-details">
+    <div class="user-name"><%= user.name %></div>
+    <div class="user-posts">Number Of Posts: <%= user.post_counter %></div>
+    </div>
+    </div>
+    <% end %>
+    <% end %>
+</div>
+
 

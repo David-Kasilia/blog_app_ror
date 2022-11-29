@@ -1,4 +1,4 @@
-<div class="users_show_view">
+  <div class="posts_index_view">
     <div class="user-container">
     <div class="icon-container">
     <div class="user-icon"></div>
@@ -8,22 +8,26 @@
     <div class="user-posts">Number Of Posts: <%= @users.post_counter %></div>
     </div>
     </div>
-    <div class="user-content">
-    <div class="context">Bio <br><br> <%= @users.bio%></div>
-    </div>
-    <% @users.most_recent_post.each do |post| %>
+    <% @posts.each do |post| %>
+      <%= link_to user_posts_path(user_id: post.author_id, id: post.id) do %>
       <div class="post-content">
-      <%= link_to user_posts_path(@users) do %>
         <div class="ptitle"> Post : <%= post.title%></div>
         <div class="ptext"><%= post.text%></div>
         <div class="pcount">
         Comments: <%= post.comments_counter%>
         Likes: <%= post.likes_counter%>
+    </div>
         </div>
-        <% end %>
+    <div class="comments-container"> 
+     <% post.most_recent_comments.each do |comments| %>
+     <div class="comments">
+     <div class="comments-context">
+     <%= comments.author.name %> :  <%= comments.text %>
+     </div>
+     </div>
+     <% end %>
+      <% end %>
       </div>
     <% end %>
-    <div class="all-posts"><%= link_to "See all posts", user_posts_path(user_id: @users.id), class: "posts-btn" %></div>
-</div>
-
+  </div>
 
