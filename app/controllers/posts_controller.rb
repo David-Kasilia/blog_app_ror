@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
   def index
-    render 'posts'
+    @users = User.find_by(id: params[:user_id])
+    @posts = @users.posts
   end
 
   def show
-    render 'show'
+    @post = Post.find_by(id: params[:id])
   end
 end
