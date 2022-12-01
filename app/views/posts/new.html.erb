@@ -1,3 +1,11 @@
 <div class="postsFormContainer">
-<h1>Create A New Post</h1>
+<h1 class="create">Create A New Post</h1>
+<%= form_with model: @post, url: user_posts_path, class: "post" do |form| %>
+<div class="post-form">
+<%= form.label :title %><br>
+<%= form.text_field :title %> <br>
+<%= form.label :text %><br>
+<%= form.text_area :text, cols: 40, rows: 20 %> <br>
+</div>
+<% end %>
 </div>
