@@ -9,7 +9,7 @@
     </div>
     </div>
     <% @posts.each do |post| %>
-      <%= link_to user_posts_path(user_id: post.author_id, id: post.id) do %>
+      <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
       <div class="post-content">
         <div class="ptitle"> Post : <%= post.title%></div>
         <div class="ptext"><%= post.text%></div>

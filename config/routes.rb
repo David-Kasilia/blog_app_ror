@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'likes/index'
-  get 'comments/new'
+resources :likes
+ resources :comments
  resources :users, only: %i[index show] do
-  resources :posts, only: %i[index show]
+  resources :posts, only: %i[index show new]
  end
 
  root to: 'users#index'
