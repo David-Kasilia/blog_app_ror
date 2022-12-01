@@ -6,10 +6,13 @@
     <div class="user-details">
     <div class="user-name"><%= @users.name %></div>
     <div class="user-posts">Number Of Posts: <%= @users.post_counter %></div>
+    <div class="link-new-post">
+    <%= link_to "Create A New Post", new_user_post_path(@users), class: "new-btn" %>
+    </div>
     </div>
     </div>
     <% @posts.each do |post| %>
-      <%= link_to user_posts_path(user_id: post.author_id, id: post.id) do %>
+      <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
       <div class="post-content">
         <div class="ptitle"> Post : <%= post.title%></div>
         <div class="ptext"><%= post.text%></div>

@@ -2,21 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /users' do
+    before(:example) { get users_path } # get(:index)
     it 'returns http success' do
-      get '/users'
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(:ok)
     end
-    it 'returns http success' do
-      get '/users/:id'
-      expect(response).to have_http_status(:success)
-    end
-    it 'response body includes correct placeholder text.' do
-      get '/users'
-      expect(response.body).to include('Display The List Of Users')
-    end
-    it 'response body includes correct placeholder text.' do
-      get '/users/:id'
-      expect(response.body).to include('Display The User Details')
+    it "renders 'index' template" do
+      expect(response).to render_template('users')
     end
   end
 end

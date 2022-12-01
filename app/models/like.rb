@@ -3,6 +3,9 @@ class Like < ApplicationRecord
   belongs_to :post
 
   # A method that updates the likes counter for a post.
+
+  after_save :updates_likes_counter_post
+
   def updates_likes_counter_post
     post.increment!(:likes_counter)
   end
