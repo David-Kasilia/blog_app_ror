@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     @post = @author.posts.new(post_params)
 
     if @post.save
-      redirect_to user_path(id :@post.author_id)
+      redirect_to user_path(id: @post.author_id)
     else
       render :new, alert: ':( Cannot Create post retry again :('
     end
