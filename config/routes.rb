@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-resources :likes
- resources :comments
- resources :users, only: %i[index show] do
-  resources :posts, only: %i[index show new]
+  root to: 'users#index'
+  resources :users, only: %i[index show] do
+    resources :posts, only: %i[index show new create] do
+      resources :comments, only: %i[new create] 
+      resources :likes, only: %i[new create]
+    end
  end
 
- root to: 'users#index'
   # Defines the root path route ("/")
   # root "articles#index"
 end
