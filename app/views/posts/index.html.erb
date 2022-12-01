@@ -6,6 +6,9 @@
     <div class="user-details">
     <div class="user-name"><%= @users.name %></div>
     <div class="user-posts">Number Of Posts: <%= @users.post_counter %></div>
+    <div class="link-new-post">
+    <%= link_to "Create A New Post", new_user_post_path(@users), class: "new-post-btn" %>
+    </div>
     </div>
     </div>
     <% @posts.each do |post| %>
