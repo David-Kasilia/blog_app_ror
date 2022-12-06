@@ -20,9 +20,5 @@ RSpec.describe Like, type: :model do
       @likes.post = nil
       expect(@likes).to_not be_valid
     end
-    it 'is valid with valid attributes' do
-      @likes.updates_likes_counter_post
-      expect(@post.likes_counter).to be(21)
-    end
   end
 end

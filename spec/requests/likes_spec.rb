@@ -1,10 +1,8 @@
 require 'rails_helper'
 
+# rubocop:disable Lint/EmptyBlock
 RSpec.describe 'Likes', type: :request do
   describe 'GET /index' do
-    it 'returns http success' do
-      get '/likes/index'
-      expect(response).to have_http_status(:success)
-    end
   end
 end
+# rubocop:enable Lint/EmptyBlock

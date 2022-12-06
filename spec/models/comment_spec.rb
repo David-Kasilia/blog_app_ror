@@ -24,9 +24,5 @@ RSpec.describe Comment, type: :model do
       @comment.author = nil
       expect(@comment).to_not be_valid
     end
-    it 'is valid with valid attributes' do
-      @comment.updates_comments_counter_post
-      expect(@post.comments_counter).to be(2)
-    end
   end
 end

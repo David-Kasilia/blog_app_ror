@@ -18,6 +18,6 @@ class Post < ApplicationRecord
   # A method which returns the 5 most recent comments for a given post.
 
   def most_recent_comments
-    Comment.order(created_at: :desc).limit(5)
+    Comment.includes(:author).order(created_at: :desc).limit(5)
   end
 end
