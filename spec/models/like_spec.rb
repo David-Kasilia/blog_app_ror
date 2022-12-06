@@ -20,6 +20,5 @@ RSpec.describe Like, type: :model do
       @likes.post = nil
       expect(@likes).to_not be_valid
     end
-
   end
 end
