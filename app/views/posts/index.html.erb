@@ -1,7 +1,8 @@
   <div class="posts_index_view">
+  <h1 class="welcome">Welcome to the Posts Page. Below is the list of Posts By <%= @users.name %></h1>
     <div class="user-container">
     <div class="icon-container">
-    <div class="user-icon"></div>
+   <div class="user-icon"><%= image_tag ("#{@users.photo}"), alt: "user icon / profile photo" %></div>
     </div>
     <div class="user-details">
     <div class="user-name"><%= @users.name %></div>
