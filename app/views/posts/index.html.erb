@@ -1,5 +1,5 @@
   <div class="posts_index_view">
-  <h1 class="welcome">Welcome to the Posts Page. Below is the list of Posts By <%= @users.name %></h1>
+  <h1 class="welcome">Welcome to the Posts Page.<br> Below is the list of Posts By <%= @users.name %></h1>
     <div class="user-container">
     <div class="icon-container">
    <div class="user-icon"><%= image_tag ("#{@users.photo}"), alt: "user icon / profile photo" %></div>
@@ -23,6 +23,7 @@
     </div>
         </div>
     <div class="comments-container"> 
+      <h2 class="ptitle">This is the Comments Section.<br> Below is the list of The Most Recent Comments on the Posts By <%= @users.name %></h2>
      <% post.most_recent_comments.each do |comments| %>
      <div class="comments">
      <div class="comments-context">

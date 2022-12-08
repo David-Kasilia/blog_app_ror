@@ -1,5 +1,5 @@
  <div class="show_post_view">
-   <h1 class="welcome">Welcome to the Post Page. Below is the list of Posts By <%= @post.author.name %></h1>
+   <h1 class="welcome">Welcome to the Post Page.<br> Below is the list of Posts By <%= @post.author.name %></h1>
  <div class="post-content">
         <div class="ptitle"> Post : <%= @post.title%> by <%= @post.author.name %></div>
         <div class="ptext"><%= @post.text%></div>
@@ -15,6 +15,7 @@
     </div>
     </div>
      <div class="comments-container"> 
+     <h2 class="ptitle">This is the Comments Section.<br> Below is the list of Comments on the Posts By <%= @post.author.name %></h2>
      <% @comments.each do |comments| %>
      <div class="comments">
      <div class="comments-context">
