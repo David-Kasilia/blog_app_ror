@@ -23,9 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: blog_app_ror_development
-  username: david
-  password: 123654789
+  database: blog_app_development
+  username: paul
+  password: '+254'
   host: localhost
   port: 5432
 
@@ -61,9 +61,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_app_ror_test
-  username: david
-  password: 123654789
+  database: blog_app_test
+  username: paul
+  password: '+254'
   host: localhost
   port: 5432
 
@@ -89,8 +89,8 @@ test:
 #
 production:
   <<: *default
-  database: blog_app_ror_production
-  username: david
-  password: 123654789
+  database: blog_app_production
+  username: paul
+  password: '+254'
   host: localhost
   port: 5432
