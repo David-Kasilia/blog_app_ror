@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :trackable
-  has_many :comments, foreign_key: 'author_id'
-  has_many :posts, foreign_key: 'author_id'
-  has_many :likes, foreign_key: 'author_id'
+has_many :comments, foreign_key: 'author_id', dependent: :destroy
+has_many :posts, foreign_key: 'author_id', dependent: :destroy
+has_many :likes, foreign_key: 'author_id', dependent: :destroy
 
   # Validations for the user model
   validates :name, presence: true, allow_blank: false

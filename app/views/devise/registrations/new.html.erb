@@ -25,11 +25,6 @@
     <%= f.text_field :photo, autofocus: true, autocomplete: "name", class: "finput" %>
   </div>
 
-   <div class="field">
-        <%= f.label :post_counter, class: "flabel" %><br>
-        <%= f.number_field :post_counter, class: "finput" %>
-    </div>
-
     <div class="field">
         <%= f.label :role, class: "flabel" %><br>
         <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>

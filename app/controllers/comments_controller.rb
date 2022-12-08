@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
-  load_and_authorize_resource
   before_action :authenticate_user!, only: %i[create destroy]
+  load_and_authorize_resource
+  
   def new
     @comment = Comment.new
   end
@@ -17,6 +18,8 @@ class CommentsController < ApplicationController
       render :new, alert: ':( Cannot Create comment retry again :('
     end
   end
+
+
 
   private
 
