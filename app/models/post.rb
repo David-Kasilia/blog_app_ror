@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_many :comments
-  has_many :likes
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   # Post Model Validations
   validates :title, presence: true, allow_blank: false, length: { maximum: 250 }

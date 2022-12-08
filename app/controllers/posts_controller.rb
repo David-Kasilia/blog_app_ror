@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: %i[create destroy]
+  load_and_authorize_resource
+
   def index
-    @users = User.find_by(id: params[:user_id])
-    @posts = @users.posts.includes(:author, :comments, :likes)
+    @users = User.find(params[:user_id])
+    @posts = @users.posts.includes(:comments)
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
+    @users = User.find(params[:user_id])
+    @post = @users.posts.find(params[:id])
     @comments = @post.comments.includes(:author)
   end
 
@@ -24,6 +28,14 @@ class PostsController < ApplicationController
     else
       render :new, alert: ':( Cannot Create post retry again :('
     end
+  end
+
+  def destroy
+    @users = User.find(params[:user_id])
+    @post = @users.posts.find(params[:id])
+    @users.decrement!(:post_counter)
+    @post.destroy
+    redirect_to user_posts_path, notice: 'Deleted Post'
   end
 
   private

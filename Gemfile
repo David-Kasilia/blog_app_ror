@@ -77,9 +77,11 @@ group :test do
   gem 'webdrivers'
 end
 
+# gem 'bullet', group: 'development'
+# gem "bullet", "~> 7.0"
+
 gem 'ffi', '~> 1.9', '>= 1.9.10'
 
 gem 'devise'
 
-# gem 'bullet', group: 'development'
-# gem "bullet", "~> 7.0"
+gem 'cancancan'
