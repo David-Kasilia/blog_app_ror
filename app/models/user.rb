@@ -12,6 +12,13 @@ class User < ApplicationRecord
   validates :name, presence: true, allow_blank: false
   validates :post_counter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+
+  ROLES = %i[admin default]
+
+  def admin?
+    role == 'admin'
+  end
+
   # A method that returns the 3 most recent posts for a given user.
   def most_recent_post
     Post.order(created_at: :desc).limit(3)

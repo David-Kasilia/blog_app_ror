@@ -6,32 +6,37 @@
 
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, class: "flabel" %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "finput" %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, class: "flabel" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "finput" %>
   </div>
 
  <div class="field">
-    <%= f.label :bio %><br />
+    <%= f.label :bio, class: "flabel" %><br />
     <%= f.text_field :bio, autofocus: true, autocomplete: "name", class: "finput" %>
   </div>
 
   <div class="field">
-    <%= f.label :photo_url %><br />
+    <%= f.label :photo_url, class: "flabel" %><br />
     <%= f.text_field :photo, autofocus: true, autocomplete: "name", class: "finput" %>
   </div>
 
    <div class="field">
-        <%= f.label :post_counter %><br>
-        <%= f.number_field :post_counter, :value => 0, class: "finput" %>
-      </div>
+        <%= f.label :post_counter, class: "flabel" %><br>
+        <%= f.number_field :post_counter, class: "finput" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :role, class: "flabel" %><br>
+        <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+    </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, class: "flabel" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -39,7 +44,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, class: "flabel" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "finput" %>
   </div>
 
