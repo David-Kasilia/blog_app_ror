@@ -85,4 +85,3 @@ gem 'ffi', '~> 1.9', '>= 1.9.10'
 gem 'devise'
 
 gem 'cancancan'
-
