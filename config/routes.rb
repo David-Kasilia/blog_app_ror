@@ -12,17 +12,19 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users do
-      resources :posts do
-        resources :comments
+        resources :posts do
+          resources :comments
+        end
       end
     end
   end
-end
 
-# Defines the root path route ("/")
-# root "articles#index"
-# namespace :api do
-#   namespace :v1 do
+  # Defines the root path route ("/")
+  # root "articles#index"
+  # namespace :api do
+  #   namespace :v1 do
+  # get 'api/index'
+  # get 'api/show'
 #     get 'comments/index'
 #     get 'comments/show'
 #     get 'post/index'
@@ -31,5 +33,10 @@ end
 #     get 'user/show'
 #   end
 # end
+# post "login" => "users#login"
+# get "users" => "users#index"
+# get "user/posts" => "posts#index"
+# get "post/comments" => "comments#index"
+# get "post/comments/create" => "comments#create"
 
 end
