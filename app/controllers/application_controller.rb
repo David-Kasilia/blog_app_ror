@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
-
+  
+  protect_from_forgery with: :null_session
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   # Catch all CanCan errors and alert the user of the exception

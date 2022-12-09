@@ -2,7 +2,7 @@ require_relative '../../../services/json_web_token'
 
 class Api::V1::UsersController < Api::V1::ApiController 
 
-  before_action :authenticate_request, except: [:login]
+  before_action :authenticate_token!, except: [:login]
 
   def index
     render json: User.all
@@ -11,8 +11,7 @@ class Api::V1::UsersController < Api::V1::ApiController
   def login
     @user = User.find_by_email!(params[:email])
     if @user&.valid_password?(params[:password])
-      token = JsonWebToken.encode({ id: @user.id })
-      render json: { token: }
+      render json: { token: JsonWebToken.encode(sub: user.id) }
     else
       render json: { error: 'Invalid username/password' }, status: :unauthorized
     end

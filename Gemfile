@@ -55,6 +55,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -88,5 +89,6 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'jwt'
+
 
 

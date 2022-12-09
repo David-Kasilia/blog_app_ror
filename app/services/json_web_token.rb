@@ -1,11 +1,13 @@
 class JsonWebToken
-  hmac_secret = 'my$ecretK3y'
+  JWT_SECRET = ENV["JWT_SECRET"]
 
   def self.encode(payload)
-    JWT.encode payload, hmac_secret, 'HS256'
+    # expiration = 7.days.from_now
+    JWT.encode(payload, JWT_SECRET)
   end
 
   def self.decode(token)
-    JWT.decode token, hmac_secret, true, { algorithm: 'HS256' }
+    body = JWT.decode(token, JWT_SECRET)[0]
+    HashWithIndifferentAccess.new body
   end
 end
