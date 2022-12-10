@@ -89,3 +89,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'jwt'
+
+gem 'rswag'
