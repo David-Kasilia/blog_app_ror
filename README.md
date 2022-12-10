@@ -60,6 +60,26 @@
   </ul>
 </details>
 
+<details>
+<summary>Api Endpoints</summary>
+  <ul>
+<li> POST   /api/v1/signup </li> 
+<li> POST   /api/v1/login </li>                                                                     
+<li> - GET    /api/v1/users/:user_id/posts/:post_id/comments </li>                                         
+<li> - POST   /api/v1/users/:user_id/posts/:post_id/comments </li> 
+<li> - GET    /api/v1/users/:user_id/posts/:post_id/comments/:id </li> 
+<li> - GET    /api/v1/users/:user_id/posts  </li>  
+<li> - POST   /api/v1/users/:user_id/posts </li>   
+<li> - GET    /api/v1/users/:user_id/posts/new </li>                                                                                                   
+<li> - GET    /api/v1/users/:user_id/posts/:id  </li>                                                                                           
+<li> - GET    /api/v1/users  </li>                                                   
+<li> - POST   /api/v1/users  </li>                                                                                                                           <li> - GET    /api/v1/users/:id </li> 
+  </ul>
+</details>
+
+
+
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 > The Following is how you can use the Blog App
@@ -122,6 +142,12 @@ You can deploy this project using:
 
 - GitHub: [@David-Kasilia ](https://github.com/githubhandle)
 - Twitter: [@DavidKasilia](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Paul Onchera**
+
+- GitHub: [@Paul Onchera  ](https://github.com/githubhandle)
+- Twitter: [@Paul Onchera ](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
