@@ -1,5 +1,5 @@
 class JsonWebToken
-  JWT_SECRET = ENV["JWT_SECRET"]
+  JWT_SECRET = ENV.fetch('JWT_SECRET', nil)
 
   def self.encode(payload)
     # expiration = 7.days.from_now

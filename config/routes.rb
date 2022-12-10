@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      post :auth, to: "authentication#create"
+      post :auth, to: "authentication#login"
       resources :users do
+        post :create, to: "users#create"
         resources :posts do
           resources :comments
         end

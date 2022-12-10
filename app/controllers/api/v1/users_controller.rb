@@ -1,20 +1,26 @@
-require_relative '../../../services/json_web_token'
-
-class Api::V1::UsersController < Api::V1::ApiController 
-
-  before_action :authenticate_token!, except: [:login]
+class Api::V1::UsersController < Api::V1::ApiController
+  skip_before_action :authenticate_token!
 
   def index
-    render json: User.all
+    render json: User.all, status: :ok
   end
 
-  def login
-    @user = User.find_by_email!(params[:email])
-    if @user&.valid_password?(params[:password])
-      render json: { token: JsonWebToken.encode(sub: user.id) }
+  def show
+    render json: User.find(params[:id]), status: :ok
+  end
+
+  def create
+    @users = User.create(user_params)
+    if @users.save
+      render json: @users, status: :created
     else
-      render json: { error: 'Invalid username/password' }, status: :unauthorized
+      render json: { status: 'ERROR', message: 'User Not Created' }, status: :unprocessable_entity
     end
   end
 
+  private
+
+  def user_params
+    params.permit(:name, :email, :bio, :photo, :password, :post_counter, :role)
+  end
 end
