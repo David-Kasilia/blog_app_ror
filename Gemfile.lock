@@ -102,6 +102,10 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.11.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -123,6 +127,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jwt (1.5.6)
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.8.1)
@@ -265,16 +270,19 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   cancancan
   capybara
   database_cleaner
   debug
   devise
+  dotenv-rails
   factory_bot_rails
   ffi (~> 1.9, >= 1.9.10)
   importmap-rails
   jbuilder
+  jwt
   letter_opener
   pg (~> 1.1)
   puma (~> 5.0)

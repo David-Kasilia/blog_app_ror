@@ -7,8 +7,17 @@ Rails.application.routes.draw do
       resources :comments, only: %i[new create destroy] 
       resources :likes, only: %i[new create destroy]
     end
- end
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  end
+  
+  namespace :api do
+    namespace :v1 do
+      post :login, to: "authentication#login"
+      post :signup, to: "signup#register"
+      resources :users do
+        resources :posts do
+          resources :comments
+        end
+      end
+    end
+  end
 end
