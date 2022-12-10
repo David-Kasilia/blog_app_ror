@@ -20,25 +20,4 @@ Rails.application.routes.draw do
       end
     end
   end
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # namespace :api do
-  #   namespace :v1 do
-  # get 'api/index'
-  # get 'api/show'
-#     get 'comments/index'
-#     get 'comments/show'
-#     get 'post/index'
-#     get 'post/show'
-#     get 'user/index'
-#     get 'user/show'
-#   end
-# end
-# post "login" => "users#login"
-# get "users" => "users#index"
-# get "user/posts" => "posts#index"
-# get "post/comments" => "comments#index"
-# get "post/comments/create" => "comments#create"
-
 end
